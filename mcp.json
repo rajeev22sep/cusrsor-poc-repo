@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "mulesoft-platform": {
+      "command": "npx",
+      "args": ["-y", "@mulesoft/mcp-server", "start"],
+      "env": {
+        "ANYPOINT_CLIENT_ID": "6d6616b3fa6441a2bbaf742d2bde80c9",
+        "ANYPOINT_CLIENT_SECRET": "f152BdDFDA26483Ea41a84e734b15f32"
+        
+      }
+    },
+    "brillio-deployed-case-details": {
+      "url": "https://mule-mcp-server-poc-stohvu.rajrd4-2.usa-e1.cloudhub.io/mcp",
+      "headers": {
+        "client_id": "621915ad92474fcf83c499ce57bcc71e",
+        "client_secret": "68a3c593ca62409886A16c990a254e70"
+        
+      }
+    }
+  }
+}
