@@ -18,10 +18,10 @@ public class CalculatorMain {
         while (running) {
             displayMenu();
             
-            System.out.print("\nEnter your choice (1-10): ");
+            System.out.print("\nEnter your choice (1-11): ");
             int choice = scanner.nextInt();
             
-            if (choice == 10) {
+            if (choice == 11) {
                 running = false;
                 System.out.println("Thank you for using the calculator. Goodbye!");
                 break;
@@ -102,11 +102,18 @@ public class CalculatorMain {
                         break;
                         
                     case 9:
+                        System.out.print("Enter a non-negative integer: ");
+                        int factNum = scanner.nextInt();
+                        long factResult = calculator.factorial(factNum);
+                        System.out.println("Result: " + factNum + "! = " + factResult);
+                        break;
+                        
+                    case 10:
                         demonstrateAllOperations(calculator);
                         break;
                         
                     default:
-                        System.out.println("Invalid choice! Please enter a number between 1 and 10.");
+                        System.out.println("Invalid choice! Please enter a number between 1 and 11.");
                 }
             } catch (ArithmeticException e) {
                 System.out.println("Error: " + e.getMessage());
@@ -136,8 +143,9 @@ public class CalculatorMain {
         System.out.println("6. Power (^)");
         System.out.println("7. Square Root (√)");
         System.out.println("8. Percentage");
-        System.out.println("9. Demo - Show all operations");
-        System.out.println("10. Exit");
+        System.out.println("9. Factorial (!)");
+        System.out.println("10. Demo - Show all operations");
+        System.out.println("11. Exit");
     }
     
     /**
@@ -162,6 +170,7 @@ public class CalculatorMain {
         System.out.println("Power: " + b + " ^ 2 = " + calculator.power(b, 2));
         System.out.println("Square Root: √" + b + " = " + calculator.squareRoot(b));
         System.out.println("Percentage: 25% of " + a + " = " + calculator.percentage(25, a));
+        System.out.println("Factorial: 5! = " + calculator.factorial(5));
         
         System.out.println("\nEdge case - Division by zero:");
         try {

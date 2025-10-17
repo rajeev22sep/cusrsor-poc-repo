@@ -94,4 +94,25 @@ public class Calculator {
     public double percentage(double percentage, double number) {
         return (percentage / 100) * number;
     }
+    
+    /**
+     * Calculates factorial of a number
+     * @param n The number to calculate factorial of (must be non-negative integer)
+     * @return Factorial of n (n!)
+     * @throws ArithmeticException if n is negative or too large
+     */
+    public long factorial(int n) {
+        if (n < 0) {
+            throw new ArithmeticException("Cannot calculate factorial of negative number!");
+        }
+        if (n > 20) {
+            throw new ArithmeticException("Number too large! Factorial only supported up to 20.");
+        }
+        
+        long result = 1;
+        for (int i = 2; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
 }
