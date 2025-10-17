@@ -18,10 +18,10 @@ public class CalculatorMain {
         while (running) {
             displayMenu();
             
-            System.out.print("\nEnter your choice (1-9): ");
+            System.out.print("\nEnter your choice (1-10): ");
             int choice = scanner.nextInt();
             
-            if (choice == 9) {
+            if (choice == 10) {
                 running = false;
                 System.out.println("Thank you for using the calculator. Goodbye!");
                 break;
@@ -93,11 +93,20 @@ public class CalculatorMain {
                         break;
                         
                     case 8:
+                        System.out.print("Enter percentage (e.g., 25 for 25%): ");
+                        num1 = scanner.nextDouble();
+                        System.out.print("Enter number: ");
+                        num2 = scanner.nextDouble();
+                        result = calculator.percentage(num1, num2);
+                        System.out.println("Result: " + num1 + "% of " + num2 + " = " + result);
+                        break;
+                        
+                    case 9:
                         demonstrateAllOperations(calculator);
                         break;
                         
                     default:
-                        System.out.println("Invalid choice! Please enter a number between 1 and 9.");
+                        System.out.println("Invalid choice! Please enter a number between 1 and 10.");
                 }
             } catch (ArithmeticException e) {
                 System.out.println("Error: " + e.getMessage());
@@ -126,8 +135,9 @@ public class CalculatorMain {
         System.out.println("5. Modulo (%)");
         System.out.println("6. Power (^)");
         System.out.println("7. Square Root (√)");
-        System.out.println("8. Demo - Show all operations");
-        System.out.println("9. Exit");
+        System.out.println("8. Percentage");
+        System.out.println("9. Demo - Show all operations");
+        System.out.println("10. Exit");
     }
     
     /**
@@ -151,6 +161,7 @@ public class CalculatorMain {
         System.out.println("Modulo: " + a + " % " + b + " = " + calculator.modulo(a, b));
         System.out.println("Power: " + b + " ^ 2 = " + calculator.power(b, 2));
         System.out.println("Square Root: √" + b + " = " + calculator.squareRoot(b));
+        System.out.println("Percentage: 25% of " + a + " = " + calculator.percentage(25, a));
         
         System.out.println("\nEdge case - Division by zero:");
         try {

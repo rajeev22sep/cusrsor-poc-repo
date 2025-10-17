@@ -84,4 +84,14 @@ public class Calculator {
         }
         return Math.sqrt(a);
     }
+    
+    /**
+     * Calculates percentage of a number
+     * @param percentage The percentage value (e.g., 25 for 25%)
+     * @param number The number to calculate percentage of
+     * @return The percentage value (e.g., 25% of 200 = 50)
+     */
+    public double percentage(double percentage, double number) {
+        return (percentage / 100) * number;
+    }
 }
