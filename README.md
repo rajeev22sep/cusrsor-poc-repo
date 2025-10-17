@@ -14,6 +14,7 @@ A simple command-line calculator application in Java that performs all basic ari
 - **Power** (^): Raise a number to a power
 - **Square Root** (√): Calculate square root with negative number error handling
 - **Percentage**: Calculate percentage of a number (e.g., 25% of 200)
+- **Factorial** (!): Calculate factorial of a non-negative integer (0! to 20!)
 - **Interactive Menu**: User-friendly command-line interface
 - **Demo Mode**: Demonstrates all operations with sample values
 
@@ -54,10 +55,11 @@ Calculator Operations:
 6. Power (^)
 7. Square Root (√)
 8. Percentage
-9. Demo - Show all operations
-10. Exit
+9. Factorial (!)
+10. Demo - Show all operations
+11. Exit
 
-Enter your choice (1-10): 1
+Enter your choice (1-11): 1
 Enter first number: 15
 Enter second number: 7
 Result: 15.0 + 7.0 = 22.0
